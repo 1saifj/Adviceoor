@@ -26,6 +26,7 @@ const MainApp = ({ theme }) => {
             Api.get("/advice")
                 .then((res) => {
                     setData(res.data.slip);
+                    console.log(res.data.slip);
                     setLoading(false);
                 })
                 .catch((err) => {
@@ -56,15 +57,15 @@ const MainApp = ({ theme }) => {
                             </div>
                         </div>
                     </div>
+
+                    <div className="flex sm:hidden dark:text-gray-400 text-gray-500 rounded bg-white dark:bg-gray-800 mt-2 py-4 px-5 space-x-7 justify-center transition items-center font-semibold"></div>
                     <button
-                        className="bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400 font-semibold py-2 px-4 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:shadow-outline"
+                        className="bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400 font-semibold py-2 px-4  shadow-lg hover:shadow-xl focus:outline-none focus:shadow-outline"
                         onClick={() => {
                             getData();
                         }}>
                         get New Advice
                     </button>
-
-                    <div className="flex sm:hidden dark:text-gray-400 text-gray-500 rounded bg-white dark:bg-gray-800 mt-2 py-4 px-5 space-x-7 justify-center transition items-center font-semibold"></div>
                 </div>
             )}
         </div>

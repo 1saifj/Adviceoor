@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "./Componenets/Footer";
 import { Header } from "./Componenets/Header";
 import MainApp from "./MainApp";
+import "primeicons/primeicons.css";
 export const ThemeContext = React.createContext();
 
 function App() {
